@@ -1,14 +1,18 @@
 //import liraries
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Basics from './src/components/Basics';
 
+import TextInputComponent from './src/components/TextInput';
 // create a component
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>App</Text>
-      <Basics />
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        <Text>App</Text>
+        <Basics />
+        <TextInputComponent />
+      </ScrollView>
     </View>
   );
 };
@@ -21,6 +25,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#2c3e50',
   },
+  scrollViewContent:{
+    
+  }
 });
 
 //make this component available to the app
