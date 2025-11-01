@@ -16,7 +16,7 @@ const Basics = () => {
 
         <Text style={styles.nestedText}>
           My first ever React Native
-          <Text style={styles.blueText}> My first ever React Native</Text>
+          <Text style={styles.blueText}> Text within text</Text>
         </Text>
 
         {/* Image component */}

@@ -4,14 +4,21 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Basics from './src/components/Basics';
 
 import TextInputComponent from './src/components/TextInput';
+import ScrollViewComponent from './src/components/ScrollViewComponent';
+import HorizontalScrollViewComponent from './src/components/HorizontalScrollViewComponent';
 // create a component
 const App = () => {
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+      <ScrollView
+        nestedScrollEnabled={true}
+        contentContainerStyle={styles.scrollViewContent}
+      >
         <Text>App</Text>
         <Basics />
         <TextInputComponent />
+        <ScrollViewComponent />
+        <HorizontalScrollViewComponent />
       </ScrollView>
     </View>
   );
@@ -25,9 +32,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#2c3e50',
   },
-  scrollViewContent:{
-    
-  }
+  scrollViewContent: {
+    padding: 20,
+  },
 });
 
 //make this component available to the app
